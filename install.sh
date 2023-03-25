@@ -19,13 +19,13 @@ rm *.md
 # Unzip the java_maven.zip file
 unzip java_maven.zip
 
-rm -r __MACOSX
+
 
 # Remove the java_maven.zip file
 rm java_maven.zip
 
-#Adding them in the system variable
-#!/bin/bash
+rm -r __MACOSX
+
 
 #!/bin/bash
 
@@ -51,6 +51,7 @@ elif [[ "$SHELL" == "/bin/bash" ]]; then
         echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bash_profile
     fi
 fi
+
 
 
 echo "THANK YOU!!! For installing :)"
