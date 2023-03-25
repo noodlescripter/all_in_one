@@ -46,4 +46,6 @@ elif [ -n "$BASH_VERSION" ]; then
         echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bash_profile
     fi
 fi
+
+echo "THANK YOU!!! For installing :)"
 #THE END!
