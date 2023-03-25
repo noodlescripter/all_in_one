@@ -10,9 +10,11 @@ cd ~/sSoftware
 git clone https://github.com/alamhamim/all_in_one.git
 
 cd all_in_one
-rm .git
+rm -r .git
 rm *.sh
 rm *.md
+
+rm -r __MACOSX
 
 # Unzip the java_maven.zip file
 unzip java_maven.zip
@@ -24,14 +26,14 @@ rm java_maven.zip
 #!/bin/bash
 
 # Check if the user is using zsh
-if [ -n "$ZSH_VERSION" ]; then
+elif [[ "$SHELL" == "/bin/zsh" ]]; then
     # If the user is using zsh, add the environment variables to .zshrc
     echo 'export JAVA_HOME=~/sSoftware/all_in_one/java_maven/jdk-11.0.18.jdk/Contents/Home' >> ~/.zshrc
     echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.zshrc
     echo 'export MAVEN_HOME=~/sSoftware/all_in_one/java_maven/apache-maven-3.9.0' >> ~/.zshrc
     echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.zshrc
 # Check if the user is using bash
-elif [ -n "$BASH_VERSION" ]; then
+elif [[ "$SHELL" == "/bin/bash" ]]; then
     # If the user is using bash, add the environment variables to .bashrc or .bash_profile
     if [ -f "$HOME/.bashrc" ]; then
 
