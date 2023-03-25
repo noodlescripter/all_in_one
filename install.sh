@@ -7,7 +7,7 @@ mkdir ~/sSoftware
 cd ~/sSoftware
 
 # Download the java_maven.zip file from the google drive
-wget https://drive.google.com/file/d/1jnmMV5qp39BvKYrdtyOJF-5tdMZo-DQI/view?usp=share_link
+wget https://github.com/alamhamim/all_in_one/blob/main/java_maven.zip
 
 # Unzip the java_maven.zip file
 unzip java_maven.zip
