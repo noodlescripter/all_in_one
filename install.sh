@@ -10,7 +10,7 @@ cd ~/sSoftware
 git clone https://github.com/alamhamim/all_in_one.git
 
 cd all_in_one
-rm -r .git
+rm -rf .git
 rm *.sh
 rm *.md
 
@@ -24,7 +24,7 @@ unzip java_maven.zip
 # Remove the java_maven.zip file
 rm java_maven.zip
 
-rm -r __MACOSX
+rm -rf __MACOSX
 
 
 #!/bin/bash
@@ -36,6 +36,9 @@ if [[ "$SHELL" == "/bin/zsh" ]]; then
     echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.zshrc
     echo 'export MAVEN_HOME=~/sSoftware/all_in_one/apache-maven-3.9.0' >> ~/.zshrc
     echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.zshrc
+
+    #saving it
+    source ~/.zshrc
 # Check if the user is using bash
 elif [[ "$SHELL" == "/bin/bash" ]]; then
     # If the user is using bash, add the environment variables to .bashrc or .bash_profile
@@ -44,11 +47,17 @@ elif [[ "$SHELL" == "/bin/bash" ]]; then
         echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
         echo 'export MAVEN_HOME=~/sSoftware/all_in_one/apache-maven-3.9.0' >> ~/.bashrc
         echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bashrc
+
+        #saving it
+        source ~/.bashrc
     elif [ -f "$HOME/.bash_profile" ]; then
         echo 'export JAVA_HOME=~/sSoftware/all_in_one/jdk-11.0.18.jdk/Contents/Home' >> ~/.bash_profile
         echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
         echo 'export MAVEN_HOME=~/sSoftware/all_in_one/apache-maven-3.9.0' >> ~/.bash_profile
         echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bash_profile
+
+        #saving it
+        source ~/.bash_profile
     fi
 fi
 
